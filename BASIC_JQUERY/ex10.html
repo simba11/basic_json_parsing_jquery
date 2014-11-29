@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Exercise 10</title>
+  <!-- ex10 provided script links -->
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <!-- I didn't use this, but left it in -->
+  <script type="text/javascript" src="code.js"></script>
+  <script type="text/javascript">
+    // page-specific code goes here
+    $(function() {
+      //select li tag + change css
+      $("#btn-tag").click(function() {
+        $( "li" ).css( "color", "red" );
+      });
+      //add class to li tag
+      $("#btn-class").click(function() {
+        $( "li" ).addClass( "list-items" );
+      });
+      //select alpha id + change css
+      $("#btn-id").click(function() {
+        $( "#alpha" ).css( "color", "blue" );
+      });
+      //add elements after alpha
+      $("#btn-add").click(function() {
+        $( "#alpha" ).append( "<li>new item</li>" );
+      });
+      //select context li within ul + change css
+      $("#btn-context").click(function() {
+        $( "ul > li" ).css( "color", "green" );
+      });
+      //delete elements of context
+      $("#btn-delete").click(function() {
+        $( "ul > li" ).remove();
+      });
+      $("li").mouseover(function() {
+        $( "ul > li" ).hide( "slow" );
+      });
+      $("#btn-show").click(function() {
+        $( "ul > li" ).show( "slow" );
+      });
+    });
+  </script>
+  <style>
+    #btn-tag, #btn-class {
+      color: red;
+    }
+    #btn-id, #btn-add{
+      color: blue;
+    }
+    #btn-context, #btn-delete {
+      color: green;
+    }
+    p {
+      max-width: 500px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Demos</h1>
+  <ul>
+    <li id="alpha">Alpha</li>
+    <li>Beta</li>
+    <li>Gamma</li>
+    <li>Delta</li>
+    <li>Epsilon</li>
+  </ul>
+  <p>Selectors | Manipulation:</p>
+  <button type="button" id="btn-tag" function=>Select by TAG</button><button type="button" id="btn-class">Add CLASS to selected TAG</button><br />
+  <button type="button" id="btn-id">Select by ID</button><button type="button" id="btn-add">Add NEW ELEMENT under selected ID</button><br />
+  <button type="button" id="btn-context">Select by CONTEXT</button><button type="button" id="btn-delete">DELETE selected CONTEXT elements</button>
+  <p>Effects (mouseover list to hide):</p>
+  <button type="button" id="btn-show">Show it all!</button>
+
+  <h1>Plugins</h1>
+  <h3><a href="http://plugins.jquery.com/blueimp-file-upload-jquery-ui/">jQuery File Upload</a></h3>
+  <p>A jQuery UI widget that allows for easy file upload. You can select multiple files, and it has built in drag and
+  drop support. It comes with 4 built it buttons, progress bars, and preview images. Works with any server side platform that supports standard HTML form file uploads.</p>
+  <h3><a href="http://jqueryui.com/autocomplete/">Autocomplete</a></h3>
+  <p>A jQuery widget that provides suggestions to words as you type. It uses a pre-populated list of words (that you can define), and as users type it searches and filters based on input. It has tons of added functionality including:  categorizing words in the drop-down list, searching the entire list by letter (i.e. if you type 'a' any programming language containing that letter will be returned), and scrollable results.
+</body>
+
+</html>
