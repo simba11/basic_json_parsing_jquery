@@ -1,0 +1,11 @@
+{% if latest_contact_list %}
+<h1>Contact List:</h1>	
+	<ul>
+	{% for contact in latest_contact_list %}
+		<li><a href="{{ contact.id }}">{{ contact.first_name }}</a></li>
+	{% endfor %}
+	</ul>
+{% else %}
+	<p>No contacts are available.</p>
+{% endif %}
+<a href="new">Add new contact</a>

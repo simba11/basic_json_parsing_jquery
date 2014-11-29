@@ -1,0 +1,4 @@
+
+# Output the meaning of life below
+print("42")
+

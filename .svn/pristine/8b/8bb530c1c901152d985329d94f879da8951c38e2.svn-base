@@ -1,0 +1,16 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+	ignorecase = true
+	precomposeunicode = false
+[remote "boilerplate"]
+	url = http://innovate.cs.surrey.sfu.ca/code/531062abb7b27cd139d8f8c8
+	fetch = +refs/heads/*:refs/remotes/boilerplate/*
+[branch "master"]
+	remote = boilerplate
+	merge = refs/heads/master
+[remote "submit"]
+	url = http://submit:ba9gwaq9dsOeyDgX@innovate.cs.surrey.sfu.ca/code/53110f30c318f4bd58b2af7b
+	fetch = +refs/heads/*:refs/remotes/submit/*

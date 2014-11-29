@@ -1,0 +1,5 @@
+AddType text/plain *.*
+AddType application/json;charset=utf-8
+
+ExpiresActive On
+ExpiresByType application/json "access plus 6 hours"
